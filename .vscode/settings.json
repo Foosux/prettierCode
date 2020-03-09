@@ -1,0 +1,22 @@
+{
+  // 每次保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // "[html]": {
+  //   "editor.defaultFormatter": "vscode.html-language-features"
+  // },
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // 影藏文件
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  // 每次保存的时候将代码按eslint格式进行修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // 增加对react中标签补全支持
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
