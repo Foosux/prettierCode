@@ -1,5 +1,5 @@
 /**
- * eslint 中 rules 的配置项
+ * eslint 中 rules 的配置项参考 (建议风格相关使用 prettier)
  * off 或 0：表示不验证规则。
  * warn 或 1：表示验证规则，当不满足时，给警告。
  * error或 2 ：表示验证规则，不满足时报错。
@@ -103,7 +103,10 @@ const rules = {
   'no-useless-call': 2, //禁止不必要的call和apply
   'no-void': 2, //禁用void操作符
   'no-var': 0, //禁用var，用let和const代替
-  'no-warning-comments': [1, { terms: ['todo', 'fixme', 'xxx'], location: 'start' }], //不能有警告备注
+  'no-warning-comments': [
+    1,
+    { terms: ['todo', 'fixme', 'xxx'], location: 'start' }
+  ], //不能有警告备注
   'no-with': 2, //禁用with
   'array-bracket-spacing': [2, 'never'], //是否允许非空数组里面有多余的空格
   'arrow-parens': 0, //箭头函数用小括号括起来

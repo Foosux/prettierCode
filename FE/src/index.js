@@ -1,29 +1,22 @@
 /** JS测试代码 */
 
-import test from './index2.js';
+import test from './index2.js'
 
-const obj = {
-  age: 18,
-  name: 'TOM'
-};
+console.log(test)
+alert(sdfsdsssfsd)
 
-const arr = [
-  {
-    age: 18
-  },
-  {
-    name: 'Lucy'
-  }
-];
+const obj = { age: 18, name: 'TOM' }
+
+const arr = [{ age: 18 }, { name: 'Lucy' }]
 
 function show() {
-  console.log(obj.age);
-  console.log(arr[1].name);
+  console.log(obj.age)
+  console.log(arr[1].name)
 }
 
 var a = item => {
-  console.log(obj.name);
-};
+  console.log(obj.name)
+}
 
 var a = {
   parserOptions: {
@@ -38,4 +31,4 @@ var a = {
       experimentalObjectRestSpread: true // 启用实验性的 object rest/spread properties 支持。(重要：这是一个实验性的功能,在未来可能会有明显改变。 建议你写的规则 不要 依赖该功能，除非当它发生改变时你愿意承担维护成本。)
     }
   }
-};
+}

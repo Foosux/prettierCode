@@ -1,12 +1,6 @@
 {
-  // 每次保存的时候自动格式化
-  "editor.formatOnSave": true,
-  // "[html]": {
-  //   "editor.defaultFormatter": "vscode.html-language-features"
-  // },
-  // "[javascript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
+  // 关闭自动保存，统一走 eslint 修复保存
+  "editor.formatOnSave": false,
   // 影藏文件
   "files.exclude": {
     // "**/node_modules": false
@@ -15,6 +9,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  // 【重要】指定eslint的工作目录，增加 plugins时若不指定会致使 eslint提示 失效
+  "eslint.workingDirectories": ["./FE"],
   // 增加对react中标签补全支持
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
