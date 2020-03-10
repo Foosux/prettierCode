@@ -48,8 +48,8 @@ const Appeal = props => {
   const uploadButton = useMemo(
     () => (
       <div>
-        <Icon type='plus' />
-        <div className='ant-upload-text'>上传文件</div>
+        <Icon type="plus" />
+        <div className="ant-upload-text">上传文件</div>
       </div>
     ),
     []
@@ -66,9 +66,9 @@ const Appeal = props => {
 
   return useMemo(
     () => (
-      <div styleName='appealModal'>
+      <div styleName="appealModal">
         <Form onSubmit={handleSubmit}>
-          <Form.Item label='申诉原因' {...BASE_COL_COUNT} extra={checkLenth}>
+          <Form.Item label="申诉原因" {...BASE_COL_COUNT} extra={checkLenth}>
             {getFieldDecorator('reasons', {
               rules: [
                 {
@@ -78,12 +78,12 @@ const Appeal = props => {
                   message: '申诉原因不能超过200个字'
                 }
               ]
-            })(<TextArea rows={4} placehodles='请填写申诉原因' />)}
+            })(<TextArea rows={4} placehodles="请填写申诉原因" />)}
           </Form.Item>
-          <Form.Item label='上传证明材料' {...BASE_COL_COUNT}>
+          <Form.Item label="上传证明材料" {...BASE_COL_COUNT}>
             <Upload
-              action='//jsonplaceholder.typicode.com/posts/'
-              listType='picture-card'
+              action="//jsonplaceholder.typicode.com/posts/"
+              listType="picture-card"
               fileList={fileList}
               onPreview={handlePreview}
               onChange={handleChange}
@@ -91,9 +91,9 @@ const Appeal = props => {
               {fileList.length <= 6 && uploadButton}
             </Upload>
           </Form.Item>
-          <FooterBtns classNames='tr'>
+          <FooterBtns classNames="tr">
             <Button onClick={() => onCancel()}>取消</Button>
-            <Button type='primary' htmlType='submit'>
+            <Button type="primary" htmlType="submit">
               提交
             </Button>
           </FooterBtns>
@@ -101,7 +101,7 @@ const Appeal = props => {
 
         <Modal visible={previewVisible} footer={null} onCancel={() => setPreviewVisible(false)}>
           <img
-            alt='example'
+            alt="example"
             style={{
               width: '100%'
             }}

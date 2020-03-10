@@ -9,7 +9,7 @@
   // },
   // 影藏文件
   "files.exclude": {
-    "**/node_modules": true
+    // "**/node_modules": false
   },
   // 每次保存的时候将代码按eslint格式进行修复
   "editor.codeActionsOnSave": {
