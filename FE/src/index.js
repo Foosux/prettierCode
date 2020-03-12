@@ -1,11 +1,11 @@
 /** JS测试代码 */
 
-import test from './index2.js'
+import test from './index2.js';
 
-console.log(test)
-alert(sdfsdsssfsd)
+console.log(test);
+alert(sdfsdsssfsd);
 
-const obj = { age: 18, name: 'TOM' }
+      const obj = { age: 18, name: "TOM" }
 
 const arr = [{ age: 18 }, { name: 'Lucy' }]
 

@@ -1,55 +1,55 @@
-import React, { useMemo, useState, useCallback, Fragment } from "react";
-import { Form, Input, Upload, Icon, Modal, Button } from "ant-man";
-import CSSModules from "react-css-modules";
-import FooterBtns from "components/FooterBtns";
-import styles from "../index.module.styl";
+import React, { useMemo, useState, useCallback, Fragment } from 'react'
+import { Form, Input, Upload, Icon, Modal, Button } from 'ant-man'
+import CSSModules from 'react-css-modules'
+import FooterBtns from 'components/FooterBtns';
+import styles from '../index.module.styl'
 
-import { BASE_COL_COUNT, SINGLE_COL_LAYOUT } from "../config";
+import { BASE_COL_COUNT, SINGLE_COL_LAYOUT } from '../config'
 
-const { TextArea } = Input;
+const { TextArea } = Input
 
 const Appeal = props => {
-  const { form, onOk, onCancel, dispatch } = props || {};
+  const { form, onOk, onCancel, dispatch } = props || {}
   const {
     getFieldDecorator,
     validateFields,
     getFieldValue,
     setFieldsValue
-  } = form;
+  } = form
 
-  const [previewVisible, setPreviewVisible] = useState(false);
-  const [previewImage, setPreviewImage] = useState("");
+  const [previewVisible, setPreviewVisible] = useState(false)
+  const [previewImage, setPreviewImage] = useState('')
   const [fileList, setFileList] = useState([
     {
-      uid: "-1",
-      name: "xxx.png",
-      status: "done",
+      uid: '-1',
+      name: 'xxx.png',
+      status: 'done',
       url:
-        "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
     }
-  ]);
+  ])
 
   const handlePreview = useCallback(file => {
-    setPreviewImage(file.url || file.thumbUrl);
-    setPreviewVisible(true);
-  }, []);
+    setPreviewImage(file.url || file.thumbUrl)
+    setPreviewVisible(true)
+  }, [])
 
   const handleChange = useCallback(
     ({ fileList }) => {
-      setFileList(fileList);
+      setFileList(fileList)
     },
     [fileList]
-  );
+  )
 
   const handleSubmit = useCallback(e => {
-    e.preventDefault();
+    e.preventDefault()
     validateFields((err, values) => {
       if (!err) {
-        console.log("Received values of form: ", values);
-        onOk(values);
+        console.log('Received values of form: ', values)
+        onOk(values)
       }
-    });
-  }, []);
+    })
+  }, [])
 
   const uploadButton = useMemo(
     () => (
@@ -59,36 +59,36 @@ const Appeal = props => {
       </div>
     ),
     []
-  );
+  )
 
   const checkLenth = useMemo(
     () => (
       <div>
-        {" "}
+        {' '}
         {`${
-          getFieldValue("reasons") ? getFieldValue("reasons").length : 0
+          getFieldValue('reasons') ? getFieldValue('reasons').length : 0
         }/200`}
       </div>
     ),
     [form]
-  );
+  )
 
   const hanleText = val => {
-    console.log(99999, val);
-  };
+    console.log(99999, val)
+  }
 
   return useMemo(
     () => (
       <div styleName='appealModal'>
         <Form onSubmit={handleSubmit}>
           <Form.Item label='申诉原因' {...BASE_COL_COUNT} extra={checkLenth}>
-            {getFieldDecorator("reasons", {
+            {getFieldDecorator('reasons', {
               rules: [
                 {
                   required: true,
-                  message: "不能为空",
+                  message: '不能为空',
                   max: 200,
-                  message: "申诉原因不能超过200个字"
+                  message: '申诉原因不能超过200个字'
                 }
               ]
             })(<TextArea rows={4} placehodles='请填写申诉原因' />)}
@@ -120,7 +120,7 @@ const Appeal = props => {
           <img
             alt='example'
             style={{
-              width: "100%"
+              width: '100%'
             }}
             src={previewImage}
           />
@@ -128,9 +128,9 @@ const Appeal = props => {
       </div>
     ),
     [form, previewVisible, fileList]
-  );
-};
+  )
+}
 
-export default Form.create({ name: "AppealForm" })(
+export default Form.create({ name: 'AppealForm' })(
   CSSModules(Appeal, styles, { allowMultiple: true })
-);
+)
