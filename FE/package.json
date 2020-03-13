@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "precommit": "lint-staged"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,6 +12,7 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1"
   },
@@ -22,5 +21,11 @@
       "eslint --fix",
       "git add"
     ]
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {}
 }
