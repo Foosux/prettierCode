@@ -1,13 +1,20 @@
 {
   // 关闭自动保存，统一走 eslint 修复保存
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // 影藏文件
-  "files.exclude": {
-    // "**/node_modules": false
+  // 使能每一种语言默认格式化规则
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  // "[css]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[less]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
   // 每次保存的时候将代码按eslint格式进行修复
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint":  true
+    "source.fixAll.eslint": false
   },
   // 【重要】指定eslint的工作目录，增加 plugins时若不指定会致使 eslint提示 失效
   "eslint.workingDirectories": ["./FE"],

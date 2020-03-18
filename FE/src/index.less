@@ -1,0 +1,40 @@
+.App {
+  overflow: hidden; width: 100%; height: 100vh; display: flex; flex-direction: column; margin: 0 auto;
+  max-width: 600px;
+
+  .App-logo {
+    height:40vmin;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 20px;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+  height: 44px;
+  margin-bottom: 5px;
+}
+.App-body {
+  padding: 0 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.App_mobile .App-header {
+  display: none;
+}
+.App_mobile .App-body-2 {
+  padding: 0px;
+}

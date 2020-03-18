@@ -18,7 +18,15 @@ const prettierrc = {
   FilePath: none, // 指定文件的输入路径，这将被用于解析器参照 filePath: "<string> ",默认 none
   requirePragma: false, // 必须杂注,严格按照按照文件顶部的一些特殊的注释格式化代码 "<bool>", 默认 false
   insertPragma: false, // 是否为已格式化的文件加上头部注释 "<bool>", 默认 false
-  proseWrap: 'perserve' // 是否启用折行 <always|never|preserver > <超出printWidth就折行|不折行|按照文件原样折行>
+  proseWrap: 'perserve', // 是否启用折行 <always|never|preserver > <超出printWidth就折行|不折行|按照文件原样折行>
+
+  eslintIntegration: false, //不让prettier使用eslint的代码格式进行校验
+  stylelintIntegration: false, //不让prettier使用stylelint的代码格式进行校验
+  tslintIntegration: false, // 不让prettier使用tslint的代码格式进行校验
+  disableLanguages: ['vue'], // 不格式化vue文件，vue文件的格式化单独设置
+  ignorePath: '.prettierignore', // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
+  endOfLine: 'auto', // 结尾是 \n \r \n\r auto
+  htmlWhitespaceSensitivity: 'ignore'
 }
 
 // 解析器可选项
