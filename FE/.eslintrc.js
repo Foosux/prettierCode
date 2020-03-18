@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     // eslint默认检测规则（非必选，可挑选使用其它大厂规则）
     'airbnb',
+    'airbnb/hooks',
     // react检测规则
     'plugin:react/recommended',
     // Prettier检测规则，修复与eslint检测重复的问题（建议选择）
@@ -37,15 +38,15 @@ module.exports = {
     // }
   },
   // extends规则使用融合语法时，可省略 plugins
-  plugins: ['react-hooks'],
+  plugins: [],
   rules: {
     // extends规则使用融合语法时，可省略对应 rules（默认等级为 error）
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'error'
 
     /** 指定react编码规范 */
     // 只能在React函数组件中被调用等 hooks 使用规则
-    'react-hooks/rules-of-hooks': 'error',
+    // 'react-hooks/rules-of-hooks': 'error',
     // 强制在使用 effect 的时候，申明所需要的依赖
-    'react-hooks/exhaustive-deps': 'warn'
+    // 'react-hooks/exhaustive-deps': 'warn'
   }
 }
