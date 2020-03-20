@@ -1,0 +1,40 @@
+$nav-color: #f90;
+
+nav {
+  $width: 100px;
+
+  color: $nav-color;
+  width: $width;
+}
+
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:visited {
+    color: $visited;
+  }
+}
+
+a {
+  @include link-colors(blue, red, green);
+}
+
+.blue-theme {
+  @import 'blue-theme';
+}
+
+.disabled {
+  color: gray;
+
+  @extend a;
+}

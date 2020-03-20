@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:css": "stylelint src/**/*.{css,less,scss}"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,12 +21,15 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.3",
     "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylus-supremacy": "^2.14.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {}
+  }
 }

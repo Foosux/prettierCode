@@ -1,25 +1,37 @@
 {
-  // 关闭自动保存，统一走 eslint 修复保存
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  "editor.detectIndentation": false,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  // 是否自动修复
   "editor.formatOnSave": false,
-  // 影藏文件
   // 使能每一种语言默认格式化规则
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // "[css]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // "[less]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   // 每次保存的时候将代码按eslint格式进行修复
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   // 【重要】指定eslint的工作目录，增加 plugins时若不指定会致使 eslint提示 失效
   "eslint.workingDirectories": ["./FE"],
   // 增加对react中标签补全支持
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  }
+  },
+  // 配合stylelint规则，关闭 vscode编辑器检测
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  //制表符显示
+  "editor.renderControlCharacters": true,
+  //空格显示
+  "editor.renderWhitespace": "all"
 }

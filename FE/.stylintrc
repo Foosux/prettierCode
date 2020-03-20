@@ -1,0 +1,50 @@
+{
+  "blocks": false,       // @语法
+  "brackets": "never",  // 包裹的大括号
+  "colons": "never",   // 属性中间的冒号  默认 always
+  "colors": "always",
+  "semicolons": "never", // 结尾分号
+  "commaSpace": "always", // 逗号后面的空格 (a, b)
+  "commentSpace": "always", // 注释 // 后面的空格
+  "cssLiteral": "never",
+  "customProperties": [],
+  "depthLimit": false,   // 默认false
+  "duplicates": true,
+  "efficient": "always",    // 简写属性
+  "exclude": [],  // 屏蔽的文件
+  "extendPref": false,
+  "globalDupe": false,
+  "groupOutputByFile": true,
+  "indentPref": 2,      // 设置tab格式，默认false（hard tab）| 使用空格数
+  "leadingZero": "never",  // 是否要小数点前面的零 .5px
+  "maxErrors": false,
+  "maxWarnings": false,
+  "mixed": false,
+  "mixins": [],
+  "namingConvention": false,
+  "namingConventionStrict": false,
+  "none": "never",  // 是否允许none值  border: none => border: 0px
+  "noImportant": true,
+  "parenSpace": false,  // 括号是否保留空格  ( a, b )
+  "placeholders": "always",
+  "prefixVarsWithDollar": "always",
+  "quotePref": false, // 使用单引号 or 双引号
+  "reporterOptions": {
+    "columns": [
+      "lineData",
+      "severity",
+      "description",
+      "rule"
+    ],
+    "columnSplitter": " ",
+    "showHeaders": false,
+    "truncate": true
+  },
+  "sortOrder": "grouped",  // 样式排序 "alphabetical"按字母顺序 | "grouped"先布局后装饰
+  "stackedProperties": "never",
+  "trailingWhitespace": "never",
+  "universal": false,
+  "valid": true,
+  "zeroUnits": "never", // 省略 0px 后面的单位
+  "zIndexNormalize": false
+}
